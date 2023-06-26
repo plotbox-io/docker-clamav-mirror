@@ -7,7 +7,7 @@ import http.server
 import socketserver
 
 # Update the mirror every N hours
-EVERY_N_HOURS = 4
+EVERY_N_HOURS = 1
 
 
 def update():
@@ -22,7 +22,7 @@ def keep_updating():
     while True:
         logging.info("Performing update!")
         update()
-        time.sleep(60 * 60 * EVERY_N_HOURS)
+        time.sleep(60 * 60 * EVERY_N_HOURS + 5)
 
 
 if __name__ == "__main__":
